@@ -17,14 +17,14 @@ export default function Layout() {
     Roboto_700Bold,
   });
 
-  if (!fonstLoaded) {
-    SplashScreen.preventAutoHideAsync(); //Mantém a tela de Splash na tela até carregar algo.
+  if (fonstLoaded) {
+    SplashScreen.hideAsync();
   }
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar barStyle="light-content" />
-      <Slot />
+      {fonstLoaded && <Slot />}
     </GestureHandlerRootView>
   );
 }
