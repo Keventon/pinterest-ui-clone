@@ -1,4 +1,4 @@
-import { Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { FontAwesome, Entypo } from "@expo/vector-icons";
 
 import { MenuButtonProps } from "./menuButton";
@@ -13,21 +13,13 @@ export function MenuButton({
 }: MenuButtonProps) {
   return (
     <TouchableOpacity style={styles.container} activeOpacity={0.7}>
-      {iconAwesomeExist ? (
-        <FontAwesome
-          name={icon}
-          size={32}
-          color={theme.colors.white}
-          style={styles.icon}
-        />
-      ) : (
-        <Entypo
-          name={iconEntypo}
-          size={32}
-          color={theme.colors.white}
-          style={styles.icon}
-        />
-      )}
+      <View style={styles.iconContainer}>
+        {iconAwesomeExist ? (
+          <FontAwesome name={icon} size={32} color={theme.colors.white} />
+        ) : (
+          <Entypo name={iconEntypo} size={32} color={theme.colors.white} />
+        )}
+      </View>
 
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>

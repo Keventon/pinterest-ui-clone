@@ -25,6 +25,7 @@ export default function TabLayout() {
           tabBarStyle: {
             backgroundColor: theme.colors.black,
             borderColor: theme.colors.black,
+            borderTopColor: theme.colors.black,
           },
         }}
       >

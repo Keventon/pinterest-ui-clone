@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 10,
   },
-  icon: {
+  iconContainer: {
     padding: 24,
     backgroundColor: theme.colors.gray[700],
     borderRadius: 22,

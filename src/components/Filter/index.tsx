@@ -9,10 +9,12 @@ export function Filter({
   ...rest
 }: TouchableOpacityProps & FilterProps) {
   return (
-    <TouchableOpacity style={styles.pressable} {...rest} activeOpacity={0.7}>
-      <Text style={[styles.text, selected && styles.pressableSelected]}>
-        {filter}
-      </Text>
+    <TouchableOpacity
+      style={[styles.pressable, selected && styles.pressableSelected]}
+      {...rest}
+      activeOpacity={0.7}
+    >
+      <Text style={[styles.text]}>{filter}</Text>
     </TouchableOpacity>
   );
 }
